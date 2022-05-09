@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <!--设置IE浏览器的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--设定网页视口大小，即网页宽度默认为设备宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>part 3</title>
+
+    <style>
+        /* 从下到上渐入动画 */
+        @keyframes fadedownIn {
+            0% {
+                opacity: 0;
+                /* visibility: hidden; */
+                transform: translate3d(0, 100px, 0);
+            }
+
+            100% {
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* 从上到下渐入动画 */
+        @keyframes fadeupIn {
+            0% {
+                opacity: 0;
+                /* visibility: hidden; */
+                transform: translate3d(0, -100px, 0);
+            }
+
+            100% {
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .p_4 ul {
+            /* margin: auto; */
+            /* margin-top: 40px; */
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+
+        .p_4 ul li {
+            margin-top: 50px;
+            list-style: none;
+            position: relative;
+        }
+        
+        .love_story {
+            /* position: relative; */
+            margin-top: 30px;
+            animation-name: fadedownIn;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            visibility: hidden;
+            animation-fill-mode: forwards;
+
+        }
+
+        .love_story span {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-size: 30px;
+            opacity: 0.1;
+            content: "";
+            font-weight: 700;
+            display: block;
+            /* font-family: "Great Vibes", cursive; */
+        }
+
+        .love_story h2 {
+            font-size: 60px;
+            padding: 0;
+            margin: 0;
+            font-family: "Great Vibes", cursive;
+            color: #f67e7d;
+        }
+
+        .love_story_left {
+            position: absolute;
+            left: 0;
+        }
+
+        .love_story_left::before {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            content: '';
+            border: 2px solid rgba(0, 0, 0, 0.15);
+            /* z-index: 1; */
+            transform: rotate(-2deg);
+        }
+
+        .love_story_left::after {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            content: '';
+            border: 2px solid rgba(0, 0, 0, 0.15);
+            /* z-index: 1; */
+            transform: rotate(2deg);
+        }
+
+        .love_story_image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: url(../images/couple-1.jpg);
+            background-size: cover;
+            position: relative;
+        }
+        
+        .love_story_right {
+            position: absolute;
+            right: 0;
+        }
+
+        .love_story_right::before {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            content: '';
+            border: 2px solid rgba(0, 0, 0, 0.15);
+            /* z-index: 1; */
+            transform: rotate(-2deg);
+        }
+
+        .love_story_right::after {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            content: '';
+            border: 2px solid rgba(0, 0, 0, 0.15);
+            /* z-index: 1; */
+            transform: rotate(2deg);
+        }
+    </style>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 会自适应屏幕的大小 媒体查询 -->
+    <!--Bootstrap的栅格是将屏幕分成12份  
+        栅格的样式： col-xs-2   在超小屏幕即以上屏幕占2份 数字代表需要几个
+                    col-sm-2   在小屏设备即以上占2份
+                    col-md-2   在中等屏幕设备即以上占2份
+                    col-lg-2   在大屏幕设备即以上占2份
+    -->
+
+    <section class="p_4">
+        <div class="container">
+            <div class="row ">
+                <div class="love_story text-center">
+                    <span>Love Story</span>
+                    <h2>Love Story</h2>
+                </div>
+                <ul>
+                    <li>
+                        <div class="love_story_left col-lg-4 col-xs-6 text-right">
+                            <span> JUNE 10, 2021</span>
+                            <h3> First We Meet</h3>
+                            <p>
+                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live in .
+                            </p>
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class="love_story_image col-lg-1 ">
+                        </div>
+                    </li>
+                    <li>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class="love_story_image col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class="love_story_right col-lg-4 col-xs-6 text-right">
+                            <span> JUNE 10, 2021</span>
+                            <h3> First We Meet</h3>
+                            <p>
+                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live in .
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="love_story_left col-lg-4 col-xs-6 text-right">
+                            <span> JUNE 10, 2021</span>
+                            <h3> First We Meet</h3>
+                            <p>
+                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live in .
+                            </p>
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class="love_story_image col-lg-1">
+                        </div>
+                    </li>
+                    <li>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class="love_story_image col-lg-1">
+                        </div>
+                        <div class=" col-lg-1">
+                        </div>
+                        <div class="love_story_right col-lg-4 col-xs-6 text-right">
+                            <span> JUNE 10, 2021</span>
+                            <h3> First We Meet</h3>
+                            <p>
+                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts. Separated they live in .
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

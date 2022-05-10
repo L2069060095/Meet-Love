@@ -1,0 +1,257 @@
+ /* 媒体查询 */
+ @media screen and (max-width: 1200px) {
+    html{
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html{
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 50px;
+    }
+}
+/* 从下到上渐入动画 */
+@keyframes fadedownIn {
+    0% {
+        opacity: 0;
+        /* visibility: hidden; */
+        transform: translate3d(0, 100px, 0);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* 从上到下渐入动画 */
+@keyframes fadeupIn {
+    0% {
+        opacity: 0;
+        /* visibility: hidden; */
+        transform: translate3d(0, -100px, 0);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.p_3 {
+    position: relative;
+    width: 100%;
+    /* height: 1200px; */
+    /* background-color: aqua; */
+}
+
+.p_3_top {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background-image: url("../images/top-bg.jpg");
+    background-position: bottom center;
+    /* background-repeat: no-repeat; */
+}
+
+.p_3_child2 {
+    width: 100%;
+    height: 800px;
+    background-color: bisque;
+}
+
+.p_3_bottom {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background-image: url("../images/bottom-bg.jpg");
+    background-size: cover;
+    background-position: top center;
+    /* background-repeat: no-repeat; */
+}
+
+.head_name {
+    position: relative;
+    top: 100px;
+    animation-name: fadedownIn;
+    animation-duration: 2s;
+}
+
+.head_name span {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 30px;
+    opacity: 0.1;
+    content: "";
+    font-weight: 700;
+    display: block;
+    /* font-family: "Great Vibes", cursive; */
+}
+
+.head_name h2 {
+    font-size: 60px;
+    padding: 0;
+    margin: 0;
+    font-family: "Great Vibes", cursive;
+    color: #f67e7d;
+}
+
+.girl {
+    height: 500px;
+    background-color: rebeccapurple;
+}
+
+.boy {
+    height: 500px;
+    background-color: rgb(168, 45, 51);
+}
+
+.center_part {
+    /* height: 800px; */
+    /* background-color: red; */
+    margin-bottom: 250px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.center_part .left {
+   
+    padding-bottom: 100px;
+    /* background-color: #f6d6d6; */
+    /* height: 800px; */
+    text-align: center;
+    position: relative;
+    animation-name: fadeupIn;
+    visibility: hidden;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.center_part .left::before {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    content: '';
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    transform: rotate(-2deg);
+}
+
+.center_part .left::after {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    content: '';
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    transform: rotate(2deg);
+}
+
+.center_part .left h2 {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.center_part .left p {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 28px;
+    color: #999999;
+}
+
+.center_part .left .left_image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url("../images/groom.jpg");
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.center_part .right {
+    padding-bottom: 100px;
+    text-align: center;
+    /* background-color: #7df697; */
+    /* height: 800px; */
+    animation-name: fadedownIn;
+    visibility: hidden;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.center_part .right::before {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+     bottom: -40px;
+    content: '';
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    transform: rotate(-2deg);
+}
+
+.center_part .right::after {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    content: '';
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    transform: rotate(2deg);
+}
+
+.center_part .right .right_image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url("../images/bride.jpg");
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.center_part .right h2 {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.center_part .right p {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 28px;
+    color: #999999;
+}

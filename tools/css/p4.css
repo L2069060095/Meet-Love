@@ -1,0 +1,172 @@
+ /* 媒体查询 */
+ @media screen and (max-width: 1200px) {
+    body {
+        background-color: pink;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        background-color: blue;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+}
+
+/* 动画 */
+@keyframes fadedownIn {
+    0% {
+        opacity: 0;
+        /* visibility: hidden; */
+        transform: translate3d(0, 100px, 0);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.love_story {
+    /* position: relative; */
+    margin-top: 30px;
+    animation-name: fadedownIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+
+}
+
+.love_story span {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 30px;
+    opacity: 0.1;
+    content: "";
+    font-weight: 700;
+    display: block;
+    /* font-family: "Great Vibes", cursive; */
+}
+
+.love_story h2 {
+    font-size: 60px;
+    padding: 0;
+    margin: 0;
+    font-family: "Great Vibes", cursive;
+    color: #f67e7d;
+}
+
+.timeline {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    /* background-color: aquamarine; */
+    margin-top: 30px;
+}
+
+.timeline::before {
+    top: 40px;
+    bottom: 130px;
+    position: absolute;
+    content: " ";
+    width: 1px;
+    border-right: 1px solid #f67e7d;
+    left: 50%;
+    transform: translate(18px);
+    /* margin-left: 0px; */
+}
+
+.timeline .timeline_child {
+    /* float: left; */
+    list-style: none;
+    margin-bottom: 50px;
+    position: relative;
+
+}
+
+.timeline .timeline_child .head_pic {
+    width: 100px;
+    height: 100px;
+    border: 5px #f67e7d solid;
+    border-radius: 50%;
+    background-image: url(../images/couple-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    box-sizing: border-box;
+    transform: translate(-50px);
+
+}
+
+.timeline .timeline_child .timeline_story {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 35%;
+    position: relative;
+    animation-name: fadedownIn;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+
+}
+
+.timeline .timeline_child .timeline_story span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #f67e7d;
+}
+
+.timeline .timeline_child .timeline_story h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.timeline .timeline_child .timeline_story p {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #fff;
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #999999;
+}
+
+.timeline .timeline_child .timeline_story::after {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    content: '';
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    transform: rotate(1deg);
+}
+
+.timeline .timeline_child .timeline_story::before {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    content: '';
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    transform: rotate(-1deg);
+}

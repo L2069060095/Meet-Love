@@ -1,17 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 
 <head>
-    <meta charset="utf-8" />
-    <!--设置IE浏览器的渲染模式-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!--设定网页视口大小，即网页宽度默认为设备宽度-->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>part 3</title>
+    <title>p4</title>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
     <style>
-        /* 从下到上渐入动画 */
+        /* 媒体查询 */
+        @media screen and (max-width: 1200px) {
+            body {
+                background-color: pink;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        /* 动画 */
         @keyframes fadedownIn {
             0% {
                 opacity: 0;
@@ -26,36 +53,6 @@
             }
         }
 
-        /* 从上到下渐入动画 */
-        @keyframes fadeupIn {
-            0% {
-                opacity: 0;
-                /* visibility: hidden; */
-                transform: translate3d(0, -100px, 0);
-            }
-
-            100% {
-                visibility: visible;
-                opacity: 1;
-                transform: none;
-            }
-        }
-
-        .p_4 ul {
-            /* margin: auto; */
-            /* margin-top: 40px; */
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-        
-
-        .p_4 ul li {
-            margin-top: 50px;
-            list-style: none;
-            position: relative;
-        }
-        
         .love_story {
             /* position: relative; */
             margin-top: 30px;
@@ -89,183 +86,186 @@
             color: #f67e7d;
         }
 
-        .love_story_left {
-            position: absolute;
-            left: 0;
+        .timeline {
+            width: 100%;
+            margin: auto;
+            position: relative;
+            /* background-color: aquamarine; */
+            margin-top: 30px;
         }
 
-        .love_story_left::before {
+        .timeline::before {
+            top: 40px;
+            bottom: 130px;
             position: absolute;
-            top: -10px;
-            left: 0;
-            right: 0;
-            bottom: -10px;
-            content: '';
-            border: 2px solid rgba(0, 0, 0, 0.15);
-            /* z-index: 1; */
-            transform: rotate(-2deg);
+            content: " ";
+            width: 1px;
+            border-right: 1px solid #f67e7d;
+            left: 50%;
+            transform: translate(18px);
+            /* margin-left: 0px; */
         }
 
-        .love_story_left::after {
-            position: absolute;
-            top: -10px;
-            left: 0;
-            right: 0;
-            bottom: -10px;
-            content: '';
-            border: 2px solid rgba(0, 0, 0, 0.15);
-            /* z-index: 1; */
-            transform: rotate(2deg);
+        .timeline .timeline_child {
+            /* float: left; */
+            list-style: none;
+            margin-bottom: 50px;
+            position: relative;
+
         }
 
-        .love_story_image {
+        .timeline .timeline_child .head_pic {
             width: 100px;
             height: 100px;
+            border: 5px #f67e7d solid;
             border-radius: 50%;
             background-image: url(../images/couple-1.jpg);
             background-size: cover;
+            background-position: center center;
+            margin-top: 30px;
+            position: absolute;
+            left: 50%;
+            box-sizing: border-box;
+            transform: translate(-50px);
+
+        }
+
+        .timeline .timeline_child .timeline_story {
+            padding-top: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 35%;
             position: relative;
-        }
-        
-        .love_story_right {
-            position: absolute;
-            right: 0;
+            animation-name: fadedownIn;
+            animation-duration: 2s;
+            animation-delay: 3s;
+            visibility: hidden;
+            animation-fill-mode: forwards;
+
         }
 
-        .love_story_right::before {
+        .timeline .timeline_child .timeline_story span {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #f67e7d;
+        }
+
+        .timeline .timeline_child .timeline_story h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .timeline .timeline_child .timeline_story p {
+            font-family: "Poppins", Arial, sans-serif;
+            background: #fff;
+            font-size: 17px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #999999;
+        }
+
+        .timeline .timeline_child .timeline_story::after {
             position: absolute;
-            top: -10px;
+            top: 0px;
             left: 0;
             right: 0;
             bottom: -10px;
             content: '';
             border: 2px solid rgba(0, 0, 0, 0.15);
-            /* z-index: 1; */
-            transform: rotate(-2deg);
+            transform: rotate(1deg);
         }
 
-        .love_story_right::after {
+        .timeline .timeline_child .timeline_story::before {
             position: absolute;
-            top: -10px;
+            top: 0px;
             left: 0;
             right: 0;
             bottom: -10px;
             content: '';
             border: 2px solid rgba(0, 0, 0, 0.15);
-            /* z-index: 1; */
-            transform: rotate(2deg);
+            transform: rotate(-1deg);
         }
     </style>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
-
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
-      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-    <!-- 会自适应屏幕的大小 媒体查询 -->
-    <!--Bootstrap的栅格是将屏幕分成12份  
-        栅格的样式： col-xs-2   在超小屏幕即以上屏幕占2份 数字代表需要几个
-                    col-sm-2   在小屏设备即以上占2份
-                    col-md-2   在中等屏幕设备即以上占2份
-                    col-lg-2   在大屏幕设备即以上占2份
-    -->
-
-    <section class="p_4">
-        <div class="container">
-            <div class="row ">
-                <div class="love_story text-center">
-                    <span>Love Story</span>
-                    <h2>Love Story</h2>
-                </div>
-                <ul>
-                    <li>
-                        <div class="love_story_left col-lg-4 col-xs-6 text-right">
-                            <span> JUNE 10, 2021</span>
-                            <h3> First We Meet</h3>
-                            <p>
-                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live in .
-                            </p>
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class="love_story_image col-lg-1 ">
-                        </div>
-                    </li>
-                    <li>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class="love_story_image col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class="love_story_right col-lg-4 col-xs-6 text-right">
-                            <span> JUNE 10, 2021</span>
-                            <h3> First We Meet</h3>
-                            <p>
-                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live in .
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="love_story_left col-lg-4 col-xs-6 text-right">
-                            <span> JUNE 10, 2021</span>
-                            <h3> First We Meet</h3>
-                            <p>
-                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live in .
-                            </p>
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class="love_story_image col-lg-1">
-                        </div>
-                    </li>
-                    <li>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class="love_story_image col-lg-1">
-                        </div>
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class="love_story_right col-lg-4 col-xs-6 text-right">
-                            <span> JUNE 10, 2021</span>
-                            <h3> First We Meet</h3>
-                            <p>
-                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live in .
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="love_story text-center">
+            <span>L o v e  S t o r y</span>
+            <h2>L o v e  S t o r y</h2>
         </div>
-    </section>
+        <ul class="timeline">
+            <li class="timeline_child">
+                <div class="row">
+                    <div class="timeline_story col-md-8 col-xs-12 text-right">
+                        <span> JUNE 10, 2021</span>
+                        <h3> First We Meet</h3>
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. Separated they live in .
+                        </p>
+                    </div>
+                    <div class="head_pic col-md-8">
+                    </div>
+                </div>
+
+            </li>
+            <li class="timeline_child">
+                <div class="row">
+                    <div class="head_pic col-md-8">
+                    </div>
+                    <div class="timeline_story col-md-8 col-xs-12 " style="float:right ;">
+                        <span> JUNE 10, 2021</span>
+                        <h3> First We Meet</h3>
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. Separated they live in .
+                        </p>
+                    </div>
+
+                </div>
+
+            </li>
+            <li class="timeline_child">
+                <div class="row">
+                    <div class="timeline_story col-lg-4 col-md-6 col-xs-12 text-right">
+                        <span> JUNE 10, 2021</span>
+                        <h3> First We Meet</h3>
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. Separated they live in .
+                        </p>
+                    </div>
+                    <div class="head_pic col-md-8">
+                    </div>
+                </div>
+
+            </li>
+            <li class="timeline_child">
+                <div class="row">
+                    <div class="head_pic col-md-8 ">
+                    </div>
+                    <div class="timeline_story col-md-8 col-xs-12 " style="float:right;">
+                        <span> JUNE 10, 2021</span>
+                        <h3> First We Meet</h3>
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. Separated they live in .
+                        </p>
+                    </div>
+
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"

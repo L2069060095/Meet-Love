@@ -1,6 +1,6 @@
 const express = require("express");
 //当文件名是index时就不用再写
-const router = require("./router/p1");
+const p1 = require("./router/p1");
 const p2 = require("./router/p2");
 const p3 = require("./router/p3");
 const p4 = require("./router/p4");
@@ -25,8 +25,7 @@ db.once("open", function() {
 });
 //配置静态资源目录
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
-app.use("/public", express.static(path.join(__dirname, "public")));
-app.use("/router", express.static(path.join(__dirname, "router")));
+app.use("/static", express.static(path.join(__dirname, "static")));
 
 //配置atr-template引擎
 app.engine("html", require("express-art-template"));
@@ -70,17 +69,18 @@ app.use(
 //   }
 // });
 //要写在body配置的后面
+
 //挂载路由
-app.use(router);
-app.use(p2);
-app.use(p3);
-app.use(p4);
-app.use(p5);
-app.use(p6);
-app.use(p7);
-app.use(p8);
-app.use(p9);
-app.use(p10);
+app.use(p1);
+// app.use(p2);
+// app.use(p3);
+// app.use(p4);
+// app.use(p5);
+// app.use(p6);
+// app.use(p7);
+// app.use(p8);
+// app.use(p9);
+// app.use(p10);
 
 
 //配置全局错误处理
@@ -94,7 +94,7 @@ app.get("*", function(req, res) {
     });
 });
 
-// 配置一个全局错误处理中间件
+// // 配置一个全局错误处理中间件
 app.use((err, req, res, next) => {
     res.json({
         code: 2002,

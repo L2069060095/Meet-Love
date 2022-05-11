@@ -8,6 +8,28 @@
     padding: 7em 0;
 }
 
+.gallery>div:first-child .gallery-text{
+    position: relative;
+}
+
+.gallery>div:first-child .gallery-text span {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 1;
+    font-size: 100px;
+    font-family: "Poppins", Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.066);
+    font-weight: 700;
+}
+
+@media screen and (max-width:992px) {
+    .gallery>div:first-child .gallery-text span {
+        font-size: 30px;
+    }
+}
 .gallery>div:first-child h2 {
     font-size: 90px;
     font-family: "Great Vibes", cursive;

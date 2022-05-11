@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15416278",
+      "name": "心-婚礼",
+      "font_class": "xin-hunli",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    }
+  ]
+}

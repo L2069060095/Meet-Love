@@ -1,21 +1,4 @@
- /* 媒体查询 */
- @media screen and (max-width: 1200px) {
-    body {
-        background-color: pink;
-    }
-}
 
-@media screen and (max-width: 992px) {
-    body {
-        background-color: blue;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        background-color: red;
-    }
-}
 
 /* 动画 */
 @keyframes fadedownIn {

@@ -1,21 +1,4 @@
- /* 媒体查询 */
- @media screen and (max-width: 1200px) {
-    html{
-        font-size: 150px;
-    }
-}
 
-@media screen and (max-width: 992px) {
-    html{
-        font-size: 100px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    html{
-        font-size: 50px;
-    }
-}
 /* 从下到上渐入动画 */
 @keyframes fadedownIn {
     0% {

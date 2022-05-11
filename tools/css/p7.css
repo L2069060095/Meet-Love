@@ -105,13 +105,13 @@
 
 @media screen and (min-width:580px) and (max-width:768px) {
     .row .item {
-        /* width: 5.8rem; */
+        width: 5.8rem;
         height: 8.5rem;
         transform: translateX(35%);
     }
 
     .row .item .inner {
-        /* width: 5.6rem; */
+        width: 5.6rem;
         height: 8.2rem;
     }
 }

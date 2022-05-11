@@ -1,5 +1,4 @@
 
-
 /* 动画 */
 @keyframes fadedownIn {
     0% {
@@ -64,7 +63,7 @@
     width: 1px;
     border-right: 1px solid #f67e7d;
     left: 50%;
-    transform: translate(18px);
+    /* transform: translate(18px); */
     /* margin-left: 0px; */
 }
 
@@ -92,10 +91,13 @@
 
 }
 
+
 .timeline .timeline_child .timeline_story {
     padding-top: 10px;
     padding-left: 30px;
     padding-right: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     width: 35%;
     position: relative;
     animation-name: fadedownIn;
@@ -152,4 +154,23 @@
     content: '';
     border: 2px solid rgba(0, 0, 0, 0.15);
     transform: rotate(-1deg);
+}
+
+@media screen and (max-width: 768px) {
+    
+    .timeline::before{
+        border: 0;
+    }
+    .timeline .timeline_child{
+        float: left;
+    }
+    .timeline .timeline_child .head_pic {
+        
+        position: static;
+        margin-left: 70px;
+    }
+    .timeline .timeline_child .timeline_story{
+        width: 70%;
+        margin-left: 0px;
+    }
 }

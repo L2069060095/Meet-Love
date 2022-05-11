@@ -1,0 +1,97 @@
+ /* 带颜色的字体图标 */
+        
+ .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+/* 背景 */
+
+.box {
+    width: 100%;
+    height: 1000px;
+    background-color: #dcf4e6;
+    position: relative;
+}
+
+.box p {
+    display: inline-block;
+    color: #f67e7d;
+    width: 1000px;
+    font-size: 60px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-weight: bolder; */
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box span {
+    font-size: 80px;
+    display: inline-block;
+    transform: rotate(30deg);
+}
+/* 表单 */
+
+.form-horizontal {
+    width: 550px;
+    height: 600px;
+    background-color: white;
+ /* border-radius: 20px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 表单组 */
+
+.form-horizontal .form-group {
+    width: 90%;
+    margin-left: 25px;
+    margin-top: 0px;
+}
+/* 输入框 */
+
+.form-horizontal .form-group .form-control {
+    height: 50px;
+}
+
+.form-horizontal .form-group .form-control:focus {
+    box-shadow: 10px 5px 30px 10px pink;
+    /* border-color: pink; */
+}
+
+.form-horizontal .form-group .text {
+    height: 100px;
+}
+/* 按钮 */
+
+.form-horizontal .form-group .btn {
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #f67e7d;
+    color: white;
+    font-weight: bolder;
+    margin-top: -20px;
+    margin-left: 130px;
+    border: 0px;
+}
+
+.form-horizontal .form-group .btn :hover {
+    color: white;
+}
+
+.form-horizontal .form-group .btn :focus {
+    outline: none;
+}

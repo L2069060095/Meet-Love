@@ -12,7 +12,11 @@
   <link rel="stylesheet" href="../../tools/css/p6.css">
   <link rel="stylesheet" href="../../tools/css/p7.css">
   <link rel="stylesheet" href="../../tools/css/p9.css">
+  <link rel="stylesheet" href="../../tools/css/attending.css">
+  <!-- <link rel="stylesheet" href="../../tools/css/message.css"> -->
+  <!-- <link rel="stylesheet" href="../../tools/css/message.css"> -->
   <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -28,9 +32,12 @@
 <body>
   {{include "./part3.html"}}
   {{include "./part4.html"}}
+  {{include "./attending.html"}}
   {{include "./part6.html"}}
   {{include "./part7.html"}}
   {{include "./part9.html"}}
+ 
+  
 
   <script src="../node_modules/jquery/dist/jquery.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -49,10 +56,7 @@
   <script src="../node_modules/jquery/dist/jquery.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <!-- Initialize Swiper -->
-<<<<<<< HEAD
 
-=======
->>>>>>> ldh
   <script>
     // 每次改变窗口大小刷新一下，不刷新轮播效果存在缺陷
     var width = document.body.clientWidth;
@@ -166,6 +170,22 @@
       }
     };
   </script>
+    <!-- Swiper JS -->
+    <script src="../../node_modules/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 
 </html>

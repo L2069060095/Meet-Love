@@ -15,7 +15,7 @@ body {
 
 .box {
     width: 100%;
-    height: 600px;
+    height: 800px;
 }
 
 .swiper-container {
@@ -23,7 +23,7 @@ body {
     height: 100%;
 }
 
-.swiper-slide {
+.ws_swiper-slide {
     border-radius: 10%;
     height: 290px;
     margin-top: 150px;

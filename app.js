@@ -1,7 +1,10 @@
 const express = require("express");
 //当文件名是index时就不用再写
+<<<<<<< HEAD
 
 const router = require("./router/index");
+=======
+>>>>>>> flp
 const path = require("path");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -65,8 +68,11 @@ app.use(
 // });
 //要写在body配置的后面
 //挂载路由
+<<<<<<< HEAD
 app.use(router);
 
+=======
+>>>>>>> flp
 
 //配置全局错误处理
 

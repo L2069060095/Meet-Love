@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .container {
+        position: relative;
+        margin-top: 50px;
+      }
+
+      .container .place {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 100px;
+        color: rgba(0, 0, 0, 0.05);
+      }
+
+      .container .time {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        font-family: "Great Vibes", cursive;
+        font-size: 90px;
+        font-weight: normal;
+        color: #f67e7d;
+      }
+
+      .row .item {
+        height: 500px;
+        width: 340px;
+        border: 1px solid black;
+        margin-top: 175px;
+        margin-left: 20%;
+        background-image: url(../public/image/place-2.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .row .p1 {
+        background-image: url(../public/image/place-1.jpg);
+      }
+
+      .row .p3 {
+        background-image: url(../public/image/place-3.jpg);
+      }
+
+      .row .item .inner {
+        height: 480px;
+        width: 320px;
+
+        background-color: white;
+      }
+      .row .item .inner .center {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+      }
+      .row .item .inner .center .glyphicon-time {
+        font-size: 120px;
+        color: coral;
+      }
+      .row .item .inner .center .glyphicon-heart {
+        font-size: 120px;
+        color: coral;
+      }
+
+      .row .item .inner .center .glyphicon-heart-empty {
+        font-size: 120px;
+        color: coral;
+      }
+
+      .row .item .inner .text .a {
+        color: coral;
+        text-decoration: none;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        .row .item {
+          width: 260px;
+          height: 500px;
+        }
+
+        .row .item .inner {
+          width: 240px;
+          height: 480px;
+        }
+      }
+
+      @media screen and (max-width: 990px) {
+        .container .place {
+          font-size: 60px;
+          font-weight: normal;
+        }
+        .container .time {
+          font-size: 60px;
+        }
+      }
+
+      @media screen and (min-width: 580px) and (max-width: 768px) {
+        .row .item {
+          width: 300px;
+          height: 500px;
+        }
+
+        .row .item .inner {
+          width: 280px;
+          height: 480px;
+        }
+      }
+
+      @media screen and (max-width: 580px) {
+        .row .item {
+          width: 300px;
+          height: 500px;
+        }
+        .row .item .inner {
+          width: 280px;
+          height: 480px;
+        }
+        .row .item .inner .center .glyphicon-time {
+          font-size: 40px;
+          color: coral;
+        }
+        .row .item .inner .center .glyphicon-heart {
+          font-size: 40px;
+          color: coral;
+        }
+
+        .row .item .inner .center .glyphicon-heart-empty {
+          font-size: 40px;
+          color: coral;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="place">Place</div>
+      <h2 class="time">Place & Time</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 col-xs-12">
+        <div class="item p1">
+          <div class="inner">
+            <div class="center">
+              <span class="glyphicon glyphicon-time"></span>
+            </div>
+            <div class="text">
+              <h3 style="text-align: center; margin-bottom: 20px">
+                The Reception
+              </h3>
+              <p style="text-align: center; margin-bottom: 20px">
+                <span>Saturday, 28, 2019</span><br /><span
+                  >02:00 pm-10:00 pm</span
+                >
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <span
+                  >203 Fake St. Mountain View, San Francisco, California,
+                  USA</span
+                >
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <a href="#" class="a">+0 (123) 456 78 910</a>
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <a href="#" class="btn-custom a">See Map</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 col-xs-12">
+        <div class="item p2">
+          <div class="inner">
+            <div class="center">
+              <span class="glyphicon glyphicon-heart"></span>
+            </div>
+            <div class="text">
+              <h3 style="text-align: center; margin-bottom: 20px">
+                The Ceremony
+              </h3>
+              <p style="text-align: center; margin-bottom: 20px">
+                <span>Saturday, 28, 2019</span><br /><span
+                  >02:00 pm-10:00 pm</span
+                >
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <span
+                  >203 Fake St. Mountain View, San Francisco, California,
+                  USA</span
+                >
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <a href="#" class="a">+0 (123) 456 78 910</a>
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <a href="#" class="btn-custom a">See Map</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <div class="item p3">
+          <div class="inner">
+            <div class="center">
+              <span class="glyphicon glyphicon-heart-empty"></span>
+            </div>
+            <div class="text">
+              <h3 style="text-align: center; margin-bottom: 20px">The Party</h3>
+              <p style="text-align: center; margin-bottom: 20px">
+                <span>Saturday, 28, 2019</span><br /><span
+                  >02:00 pm-10:00 pm</span
+                >
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <span
+                  >203 Fake St. Mountain View, San Francisco, California,
+                  USA</span
+                >
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <a href="#" class="a">+0 (123) 456 78 910</a>
+              </p>
+              <p style="text-align: center; margin-bottom: 20px">
+                <a href="#" class="btn-custom a">See Map</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../node_modules/amfe-flexible/index.js"></script>
+  </body>
+</html>

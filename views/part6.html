@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="../node_modules/swiper/swiper-bundle.min.css"
     />
-    
+
     <link
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/css/bootstrap.css"
@@ -123,7 +123,7 @@
             alt=""
             style="border-radius: 50%; width: 200px; height: 200px"
           />
-          <div class="carousel-caption" style="top: 180px">
+          <div class="carousel-caption" style="top: 180px;">
             <h3 style="color: black">Rse Jone</h3>
             <p style="color: gray">Bridesmaid</p>
           </div>
@@ -215,11 +215,15 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <!-- Initialize Swiper -->
     <script>
-      // 每次改变窗口大小刷新一下，不刷新轮播效果存在缺陷
+      
+
+      // width为浏览器当前窗口大小
       var width = document.body.clientWidth;
 
+
+      var swiper;
       if (width >= 1070) {
-        var swiper = new Swiper(".mySwiper", {
+         swiper = new Swiper(".mySwiper", {
           slidesPerView: 5,
           // 拖拽后也可以进行自动轮播
           autoplay: {
@@ -236,7 +240,7 @@
           },
         });
       } else if (width >= 600) {
-        var swiper = new Swiper(".mySwiper", {
+         swiper = new Swiper(".mySwiper", {
           slidesPerView: 2,
           // 拖拽后也可以进行自动轮播
           autoplay: {
@@ -253,7 +257,7 @@
           },
         });
       } else if (width < 600) {
-        var swiper = new Swiper(".mySwiper", {
+         swiper = new Swiper(".mySwiper", {
           slidesPerView: 1,
           // 拖拽后也可以进行自动轮播
           autoplay: {
@@ -273,8 +277,9 @@
       //   动态改变窗口大小，实现改变轮播图的样式
       window.onresize = function () {
         var width = document.body.clientWidth;
+        swiper.destroy();
         if (width >= 1070) {
-          var swiper = new Swiper(".mySwiper", {
+           swiper = new Swiper(".mySwiper", {
             slidesPerView: 5,
             // 拖拽后也可以进行自动轮播
             autoplay: {
@@ -291,7 +296,7 @@
             },
           });
         } else if (width < 1070 && width >= 600) {
-          var swiper = new Swiper(".mySwiper", {
+           swiper = new Swiper(".mySwiper", {
             slidesPerView: 2,
             // 拖拽后也可以进行自动轮播
             autoplay: {
@@ -308,7 +313,7 @@
             },
           });
         } else if (width < 600) {
-          var swiper = new Swiper(".mySwiper", {
+           swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             // 拖拽后也可以进行自动轮播
             autoplay: {

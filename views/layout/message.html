@@ -1,476 +1,454 @@
-<div class="box">
-    <div class="sbox">
-        <p>
-            Benediction
-        </p>
-    </div>
-    <!-- Swiper -->
-    <div class="ws_swiper-container ws_swiper-container-initialized swiper-container-horizontal">
-        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-788px, 0px, 0px);">
-            <div class="ws_swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7"
-                style=" width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-                        <div>{{guest[7].message}}</div>
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[7].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-                        <h4>来自{{guest[7].identity}}的的祝福！</h4>
-                        <!-- 姓名 -->
-                        <h6>{{guest[7].name}}</h6>
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8"
-                style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-                        <div>{{guest[8].message}}</div>
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[8].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-                        <h4>来自{{guest[8].identity}}的的祝福！</h4>
-                        <!-- 姓名 -->
-                        <h6>{{guest[8].name}}</h6>
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="9"
-                style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[9].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[9].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[9].identity}}的的祝福！</h4>
-
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[9].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide swiper-slide-active" data-swiper-slide-index="0"
-                style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-1].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-1].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-1].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-1].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide swiper-slide-next" data-swiper-slide-index="1"
-                style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-2].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-2].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-2].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-2].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide" data-swiper-slide-index="2" style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-3].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-3].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-3].identity}}的的祝福！</h4>
-
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-3].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide" data-swiper-slide-index="3" style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-4].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-4].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-4].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-4].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide" data-swiper-slide-index="4" style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-5].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-5].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-5].identity}}的的祝福！</h4>
-
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-5].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide" data-swiper-slide-index="5" style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-6].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-6].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-6].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-6].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide" data-swiper-slide-index="6" style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-7].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-7].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-7].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-7].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide" data-swiper-slide-index="7" style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-8].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-8].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-8].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-8].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide" data-swiper-slide-index="8" style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-9].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-9].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-9].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-9].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="9"
-                style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[guest.length-10].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[guest.length-10].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[guest.length-10].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[guest.length-10].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0"
-                style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[0].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[0].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[0].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[0].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1"
-                style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[1].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[1].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[1].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[1].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="ws_swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2"
-                style="width: 364px; margin-right: 30px;">
-
-                <div class="media">
-                    <!-- 祝福语 -->
-                    <div class="media-heading">
-
-                        <div>{{guest[2].message}}</div>
-
-                    </div>
-                    <div class="media-left">
-                        <a href="#">
-                            <!-- 头像 -->
-                            <img class="media-object" src="{{guest[2].avatar}}" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <!-- 与新人的关系 -->
-
-                        <h4>来自{{guest[2].identity}}的的祝福！</h4>
-
-                        <!-- 姓名 -->
-
-                        <h6>{{guest[2].name}}</h6>
-
-                    </div>
-                </div>
-
-            </div>
+<section id="part5">
+    <div class="ws1_box">
+        <div class="sbox">
+            <div class="message">Benediction</div>
+            <h2 class="Benediction">Benediction</h2>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
-                class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
-                aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
-                aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
-                aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
-                aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
-                aria-label="Go to slide 5"></span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span
-                class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span
-                class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span
-                class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span><span
-                class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 10"></span>
-        </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-    </div>
+        <!-- Swiper -->
+        <div class="swiper-container ">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-788px, 0px, 0px);">
+                <div class="ws swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" style=" width: 364px; margin-right: 30px;">
 
-</div>
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+                            <div>{{guest[7].message}}</div>
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[7].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+                            <h4>来自{{guest[7].identity}}的的祝福！</h4>
+                            <!-- 姓名 -->
+                            <h6>{{guest[7].name}}</h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+                            <div>{{guest[8].message}}</div>
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[8].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+                            <h4>来自{{guest[8].identity}}的的祝福！</h4>
+                            <!-- 姓名 -->
+                            <h6>{{guest[8].name}}</h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="9" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[9].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[9].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[9].identity}}的的祝福！</h4>
+
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[9].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-1].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-1].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-1].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-1].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-2].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-2].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-2].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-2].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide " data-swiper-slide-index="2" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-3].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-3].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-3].identity}}的的祝福！</h4>
+
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-3].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide" data-swiper-slide-index="3" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-4].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-4].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-4].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-4].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide" data-swiper-slide-index="4" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-5].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-5].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-5].identity}}的的祝福！</h4>
+
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-5].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide" data-swiper-slide-index="5" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-6].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-6].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-6].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-6].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide" data-swiper-slide-index="6" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-7].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-7].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-7].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-7].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide" data-swiper-slide-index="7" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-8].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-8].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-8].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-8].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide" data-swiper-slide-index="8" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-9].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-9].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-9].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-9].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="9" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[guest.length-10].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[guest.length-10].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[guest.length-10].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[guest.length-10].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[0].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[0].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[0].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[0].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[1].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[1].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[1].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[1].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ws swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 364px; margin-right: 30px;">
+
+                    <div class="media">
+                        <!-- 祝福语 -->
+                        <div class="media-heading">
+
+                            <div>{{guest[2].message}}</div>
+
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <!-- 头像 -->
+                                <img class="media-object" src="{{guest[2].avatar}}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <!-- 与新人的关系 -->
+
+                            <h4>来自{{guest[2].identity}}的的祝福！</h4>
+
+                            <!-- 姓名 -->
+
+                            <h6>{{guest[2].name}}</h6>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+
+    </div>
+</section>

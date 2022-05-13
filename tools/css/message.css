@@ -5,7 +5,6 @@ body {
 }
 
 body {
-    background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
@@ -13,21 +12,24 @@ body {
     padding: 0;
 }
 
-.box {
+.ws1_box {
     width: 100%;
-    height: 800px;
+    height: 120% !important;
+    background-color: #eee!important;
+    overflow: hidden;
 }
 
 .swiper-container {
     width: 100%;
-    height: 100%;
+    height: 90% !important;
 }
 
-.ws_swiper-slide {
-    border-radius: 10%;
-    height: 290px;
-    margin-top: 150px;
-    text-align: center;
+.ws {
+    border-radius: 10% !important;
+    height: 55% !important;
+    margin-top: 180px !important;
+    margin-bottom: 100px !important;
+    text-align: center !important;
     font-size: 18px;
     background: #fff;
     /* Center slide text vertically */
@@ -52,78 +54,109 @@ body {
     transform: scale(1);
 }
 
-.box .sbox {
-    width: 100%;
-    height: 40px;
+.ws1_box {
     position: relative;
+    height: 800px !important;
 }
 
-.box .sbox p {
-    display: inline-block;
-    color: pink;
-    font-size: 70px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* font-weight: bolder; */
-    text-align: center;
+.ws1_box>.sbox>.message {
     position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.05);
 }
+
+.ws1_box>.sbox>.Benediction {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    font-size: 100px;
+    font-weight: normal;
+    color: #f67e7d;
+}
+
+
 /* 媒体 */
 
-.media {
+.ws1_box .media {
+    margin-top: 40px;
     width: 80%;
     height: 80%;
 }
+
+
 /* 祝福 */
 
-.media .media-heading {
-    height: 50%;
+.ws1_box .media .media-heading {
+    height: 65%;
+    background-color: rgb(176, 175, 175, 0.1);
+    border-radius: 20px;
 }
 
-.media .media-heading div {
+.ws1_box .media .media-heading div {
     width: 80%;
     height: 100%;
-    font-size: 22px;
-    color: pink;
+    font-size: 30px;
+    color: #f67e7d;
     padding-top: 30px;
     margin-top: 0px;
     margin-bottom: 0px;
     overflow: hidden;
 }
 
-.media .media-left {
+.ws1_box .media .media-left {
     width: 30%;
-    height: 35%;
-    margin-top: 13%;
+    height: 60%;
+    margin-top: 50% !important;
 }
 
-.media .media-left .media-object {
+.ws1_box .media .media-left .media-object {
     width: 100%;
-    height: 100%;
+    height: 200%;
     border-radius: 30%;
 }
 
-.media .media-body {
+.ws1_box .media .media-body {
+    /* background-color: #f67e7d; */
     width: 70%;
     height: 35%;
     margin-left: 30%;
-    margin-top: -80px;
-    color: pink;
+    color: black;
     overflow: hidden;
+    padding: 20px;
 }
 
-.media .media-body h4 {
+.ws1_box .media .media-body h4 {
     margin-bottom: 5px;
     margin-top: 0px;
-    font-size: 15px;
+    font-size: 20px;
     padding-left: 5px;
     font-weight: normal;
     font-size: 10px;
 }
 
-.media .media-body h6 {
+.ws1_box .media .media-body h6 {
     margin-left: 80px;
     margin-top: 10px;
+}
+
+
+/* 栅格 */
+
+@media screen and (max-width: 768px) {
+    .ws1_box>.sbox>.message {
+        font-size: 40px !important;
+    }
+    .ws1_box>.sbox>.Benediction {
+        font-size: 80px !important;
+    }
 }

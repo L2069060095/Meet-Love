@@ -1,22 +1,21 @@
-
 <!-- 背景图片和显示首页部分 -->
 <section id="home" class="video-hero js-fullheight" style="height: 1280px; background-image: url(../../tools/images/bg_1.jpg); background-size:cover; background-position: top center;">
-    <!-- <div class="overlay"></div> -->
-    <a class="player" data-property="{videoURL:'#',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default',optimizeDisplay:true}"></a>
-    <div class="container">
-        <div class="row js-fullheight justify-content-center d-flex align-items-center">
-            <div class="col-md-12">
-                <div class="text text-center">
-                    <div class="icon">
-                        <span class="flaticon-rose-outline-variant-with-vines-and-leaves"></span>
-                    </div>
-                    <span class="subheading"></span>
-                    <h1 style="color: white; font-size: 120px; width: auto;position: absolute; top: 150px;">Shen Jingwen &amp; Huang Yu</h1>
-                    <div id="timer" class="d-flex">
-                        <div class="time" id="days"></div>
-                        <div class="time pl-3" id="hours"></div>
-                        <div class="time pl-3" id="minutes"></div>
-                        <div class="time pl-3" id="seconds"></div>
+    <div class="container anim" >
+        <div class="row" id="p_1">
+            <div class="text-center" id="p_1_chlid" style="margin-top: 10%;">
+                <div class="text-center"><img src="../../tools/images/HuangGuan.png" alt=""></div>
+                <h3 style="color: white; font-size: 80px;">Francisco &amp; Laura</h3>
+                <span style="font-size:30px ; color: white;">---------the wedding of ---------</span>
+                <!--倒计时 -->
+                <div class="container">
+                    <div class="row">
+                        <ul class="weddingtime col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                            <li class="col-xs-3" id="days1"></li>
+                            <li class="col-xs-3" id="hours1"></li>
+                            <li class="col-xs-3" id="minutes1"></li>
+                            <li class="col-xs-3" id="seconds1"></li>
+                        </ul>
+                       
                     </div>
                 </div>
             </div>
@@ -24,7 +23,7 @@
     </div>
 </section>
 
-<!--倒计时部分和新郎新娘介绍页面111  -->
+<!--新郎新娘介绍页面 -->
 <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb" id="groom-bride-section">
     <div class="container" id="p1-groom-bride-section">
         <div class="row">
@@ -37,15 +36,25 @@
                         </div>
                         <div class="col-md-6 py-md-5 text">
                             <div class="py-md-4">
-                                <div class="row justify-content-start pb-3">
-                                    <div class="col-md-12 ftco-animate p-4 p-lg-5 text-center">
-                                        <span class="subheading mb-4" id="p2-top1">让我们一起 <br>祝福新人 新婚快乐</span>
-                                        <h2 class="mb-4" id="p2-top2">Shen Jingwen <span>&amp;</span> Huang Yu</h2>
-                                        <span class="subheading" id="p2-subheading">新婚日期</span>
-                                        <p class="time mb-4" id="p2-time"><span>2021 | 09 | 28</span></p>
-                                        <span class="subheading mb-5" id="p2-start">婚礼开始时间 <br> 14:00</span>
-                                        <span class="subheading mb-5" id="p2-station">江南四季酒店<br>滨湖区锦溪路100号</span>
-                                    </div>
+                                <div class="row">
+                                    <ul class="col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-card-r ">
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font">让我们一起</li>
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font">祝福新人 新婚快乐</li>
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font-pink">Shen Jingwen <span>&amp;</li>
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font-pink ">Huang Yu</li>
+                                        <div class="text-center anim"><img src="../../tools/images/HuangGuan2.png" alt=""></div>
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font">新婚日期</li>
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font-gray">2021 &nbsp;|  &nbsp;09 &nbsp; | &nbsp; 28 &nbsp;</li>
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font p1-card-bottom">婚礼开始时间</li>
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font">14:00</li>
+                                        <li class="text-center col-md-12 col-xs-12 col-sm-12 col-lg-12 p1-font p1-card-bottom">江南四季酒店滨湖区锦溪路100号</li>
+                                    </ul>
+                                    <!-- <span class="subheading mb-4" id="p2-top1">让我们一起 <br>祝福新人 新婚快乐</span>
+                                            <h2 class="mb-4" id="p2-top2">Shen Jingwen <span>&amp;</span> Huang Yu</h2>
+                                            <span class="subheading" id="p2-subheading">新婚日期</span>
+                                            <p class="time mb-4" id="p2-time"><span>2021 | 09 | 28</span></p>
+                                            <span class="subheading mb-5" id="p2-start">婚礼开始时间 <br> 14:00</span>
+                                            <span class="subheading mb-5" id="p2-station">江南四季酒店<br>滨湖区锦溪路100号</span> -->
                                 </div>
                             </div>
                         </div>

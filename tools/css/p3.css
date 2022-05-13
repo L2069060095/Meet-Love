@@ -82,7 +82,7 @@
     top: 0;
     left: 0;
     right: 0;
-    font-size: 30px;
+    font-size: 60px;
     opacity: 0.1;
     content: "";
     font-weight: 700;
@@ -91,7 +91,7 @@
 }
 
 .head_name h2 {
-    font-size: 60px;
+    font-size: 100px;
     padding: 0;
     margin: 0;
     font-family: "Great Vibes", cursive;

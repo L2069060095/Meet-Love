@@ -20,6 +20,7 @@ app.use("/tools", express.static(path.join(__dirname, "tools")));
 
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.use("/router", express.static(path.join(__dirname, "router")));
+app.use("/swiper8", express.static(path.join(__dirname, "swiper8")));
 
 //配置atr-template引擎
 app.engine("html", require("express-art-template"));
